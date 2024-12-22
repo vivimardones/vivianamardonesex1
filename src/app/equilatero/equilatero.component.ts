@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  IonList,
-  IonItem,
-  IonInput,
-  IonButton,
-} from '@ionic/angular/standalone';
+import { IonList, IonItem, IonInput, IonButton, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent } from '@ionic/angular/standalone';
 import { FormsModule } from '@angular/forms';
 import { TrianguloEquilatero } from '../modelo/FiguraGeometrica';
 
@@ -13,7 +8,7 @@ import { TrianguloEquilatero } from '../modelo/FiguraGeometrica';
   standalone: true,
   templateUrl: './equilatero.component.html',
   styleUrls: ['./equilatero.component.scss'],
-  imports: [FormsModule, IonList, IonItem, IonInput, IonButton],
+  imports: [FormsModule, IonList, IonItem, IonInput, IonButton, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent],
 })
 export class EquilateroComponent implements OnInit {
   calcularPerimetroStr: string = '';

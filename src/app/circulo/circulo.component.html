@@ -2,6 +2,24 @@
   <ion-item>
     <h2>Figura Geometrica - Circulo</h2>
   </ion-item>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Círculo</ion-card-title>
+      <ion-card-subtitle>Perímetro</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>El perímetro de un círculo es la longitud de la línea que forma su borde.</p>
+      <p>Donde:</p>
+      <ul>
+        <li><b>P:</b> perímetro</li>
+        <li><b>d:</b> diámetro</li>
+        <li><b>r:</b> radio del círculo</li>
+        <li><b>π:</b> 3.1416</li>
+      </ul>
+      <img src="../../assets/images/circulo.png" alt="Diagrama de un círculo con radio y diámetro etiquetados" class="circle-image">
+    </ion-card-content>
+  </ion-card>
+  
   <ion-item>
     <ion-input [(ngModel)]="calcularPerimetroStr" type="number" label="Calcular Perimetro" label-placement="floating" fill="outline" placeholder="Ingrese diametro"></ion-input>
   </ion-item>

@@ -1,5 +1,5 @@
 import { Component, input, OnInit } from '@angular/core';
-import { IonList, IonItem, IonInput, IonButton } from '@ionic/angular/standalone';
+import { IonList, IonItem, IonInput, IonButton, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent } from '@ionic/angular/standalone';
 import { FormsModule } from '@angular/forms';
 import { Circulo } from '../modelo/FiguraGeometrica';
 
@@ -8,7 +8,7 @@ import { Circulo } from '../modelo/FiguraGeometrica';
   standalone: true,
   templateUrl: './circulo.component.html',
   styleUrls: ['./circulo.component.scss'],
-  imports: [FormsModule, IonList, IonItem, IonInput, IonButton],
+  imports: [FormsModule, IonList, IonItem, IonInput, IonButton, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent],
 })
 export class CirculoComponent implements OnInit {
   calcularPerimetroStr: string = '';
