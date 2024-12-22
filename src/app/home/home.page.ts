@@ -4,6 +4,7 @@ import { EquilateroComponent } from '../equilatero/equilatero.component';
 import { EscalenoComponent } from '../escaleno/escaleno.component';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonSelect, IonSelectOption } from '@ionic/angular/standalone';
 import { IonSelectCustomEvent, SelectChangeEventDetail } from '@ionic/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -18,18 +19,19 @@ import { IonSelectCustomEvent, SelectChangeEventDetail } from '@ionic/core';
     EquilateroComponent,
     EscalenoComponent,
     IonSelect, 
-    IonSelectOption],
+    IonSelectOption,
+    CommonModule],
 })
 export class HomePage {
   figura: string = "";
 
   constructor() {}
 
-  esCirculo() { return this.figura === 'circulo'; }
-  esEquilatero() { return this.figura === 'equilatero'; }
-  esEscaleno() { return this.figura === 'escaleno'; }
+  esCirculo() { return this.figura === "circulo"; }
+  esEquilatero() { return this.figura === "equilatero"; }
+  esEscaleno() { return this.figura === "escaleno"; }
 
   selecioneFigura($event: IonSelectCustomEvent<SelectChangeEventDetail<any>>) {
-    console.log('Selecionou a figura');
+    this.figura = $event.detail.value;
   }
 }
