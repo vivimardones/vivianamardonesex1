@@ -23,8 +23,8 @@ export class EquilateroComponent implements OnInit {
   ngOnInit() {}
   calcularPerimetro() {
     const lado = parseInt(this.calcularPerimetroStr);
-    const circulo = new TrianguloEquilatero(lado);
-    const perimetro = circulo.calcularPerimetro();
+    const equilatero = new TrianguloEquilatero(lado);
+    const perimetro = equilatero.calcularPerimetro();
     this.resultado = `El Perimetro es: ${perimetro}`;
   }
 }

@@ -1,3 +1,16 @@
-<p>
-  escaleno works!
-</p>
+<ion-list lines="none">
+  <ion-item>
+    <h2>Figura Geometrica - Triangulo Equilatero</h2>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="ladoA" type="number" label="Calcular Perimetro" label-placement="floating" fill="outline" placeholder="Ingrese diametro"></ion-input>
+    <ion-input [(ngModel)]="ladoB" type="number" label="Calcular Perimetro" label-placement="floating" fill="outline" placeholder="Ingrese diametro"></ion-input>
+    <ion-input [(ngModel)]="ladoC" type="number" label="Calcular Perimetro" label-placement="floating" fill="outline" placeholder="Ingrese diametro"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="calcularPerimetro()">Calcular Perimetro</ion-button>
+  </ion-item>
+  <ion-item>
+    {{resultado}}
+  </ion-item>
+</ion-list>
