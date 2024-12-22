@@ -19,7 +19,7 @@ export class CirculoComponent implements OnInit {
   calcularPerimetro() {
     const radio = parseInt(this.calcularPerimetroStr);
     const circulo = new Circulo(radio);
-    const perimetro = circulo.calcularPerimetro();
+    const perimetro = circulo.calcularPerimetro().toFixed(2);
     this.resultado = `El Perimetro es: ${perimetro}`;
   }
 }
