@@ -1,25 +1,21 @@
-abstract class FiguraGeometrica {
+export abstract class FiguraGeometrica {
     abstract calcularPerimetro(): number;
 }
 
-class Circulo extends FiguraGeometrica {
-    private tipo: string;
+export class Circulo extends FiguraGeometrica {
     private radio: number;
 
-    constructor(tipo:string, radio: number) {
+    constructor(radio: number) {
         super();
-        this.tipo = tipo;
         this.radio = radio;
     }
     
-    getTipo(): string { return this.tipo; }
-
-    calcularPerimetro(): number {
+    override calcularPerimetro(): number {
         return Math.PI * Math.pow(this.radio, 2);
     }
 }
 
-class TrianguloEscaleno extends FiguraGeometrica {
+export class TrianguloEscaleno extends FiguraGeometrica {
    protected ladoA: number;
    protected ladoB: number;
    protected ladoC: number;
@@ -35,7 +31,7 @@ class TrianguloEscaleno extends FiguraGeometrica {
    }
 }
 
-class TrianguloEquilatero extends TrianguloEscaleno {
+export class TrianguloEquilatero extends TrianguloEscaleno {
     constructor(ladoA: number) {
         super(ladoA, ladoA, ladoA);
         this.ladoA = ladoA;
